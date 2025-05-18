@@ -1,0 +1,232 @@
+@font-face {
+  font-family: barlow;
+  src: url(font/Barlow-Medium.ttf);
+}
+:root {
+  --c-dark: #212529;
+  --c-white: #ffffff;
+  --c-brand: #4e57d4;
+  --c-brand-light: #6970dd;
+  --c-brand-rgb: 78, 87, 212;
+  --c-body: #727272;
+  --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
+  --transition: all 250ms ease-out;
+}
+body {
+  font-family: barlow, "sans-serif";
+  line-height: 1.7rem;
+  color: var(--c-body);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: var(--c-dark);
+}
+a {
+  text-decoration: none;
+  color: var(--c-brand);
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--c-brand-light);
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.section-padding {
+  padding: 140px 0px;
+}
+/* carousel */
+
+nav ul li a:hover {
+  color: var(--c-brand) !important;
+}
+
+/* section */
+.section-title {
+  margin-bottom: 40px;
+}
+.section-title .line {
+  width: 60px;
+  height: 4px;
+  background-color: var(--c-brand);
+  margin: 16px auto 24px auto;
+}
+.section-title {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* icon */
+.iconbox {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--c-brand-rgb), 0.1);
+  color: var(--c-brand);
+  font-size: 34px;
+  flex: none;
+}
+.theme-shadow {
+  box-shadow: var(--box-shadow);
+}
+.service {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.service:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(var(--c-brand-rgb), 0.2);
+  bottom: 0;
+  right: 0;
+  transition: var(--transition);
+  z-index: -1;
+}
+.service:hover::after {
+  width: 100%;
+  height: 100%;
+  background-color: var(--c-brand-light);
+}
+.service:hover h5,
+.service:hover p {
+  color: white;
+}
+.service:hover .iconbox {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+#counter {
+  background: linear-gradient(
+      rgba(var(--c-brand-rgb), 0.8),
+      rgba(var(--c-brand-rgb), 0.438)
+    ),
+    url(../media/backGround/background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.image-zoom,
+.image-zoom-warpper {
+  position: relative;
+  overflow: hidden;
+}
+.image-zoom-warpper img {
+  transition: var(--transition);
+}
+.image-zoom:hover .image-zoom-warpper img {
+  transform: scale(1.1);
+}
+.portfolio-item .iconbox {
+  background-color: var(--c-brand-light);
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.portfolio-item:hover .iconbox {
+  opacity: 1;
+  top: 50%;
+}
+.review-person img {
+  width: 70px;
+}
+.review-head {
+  position: relative;
+}
+.review-head::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  background-color: white;
+  width: 28px;
+  height: 28px;
+  transform: rotate(45deg);
+}
+.review small {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--c-brand);
+}
+.team-member {
+  position: relative;
+}
+.team-member-content {
+  background-color: var(--c-brand);
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 50px);
+  padding: 24px;
+  transition: var(--transition);
+  opacity: 0;
+}
+.team-member:hover .team-member-content {
+  opacity: 1;
+  bottom: 24px;
+}
+#contact {
+  position: relative;
+  z-index: 2;
+}
+#contact::after {
+  content: "";
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(
+      rgba(var(--c-brand-rgb), 0.8),
+      rgba(var(--c-brand-rgb), 0.438)
+    ),
+    url(../media/backGround/background.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#contact .form-control {
+  border-radius: 0;
+}
+#contact .form-control:focus {
+  box-shadow: none;
+  border-color: var(--c-brand);
+}
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: var(--c-dark);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: var(--c-white);
+}
+
+.slide_label {
+  position: absolute;
+  top: 60% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  color: var(--c-white) !important;
+  font-size: 1rem !important;
+}
+.slide_label h5 {
+  color: var(--c-white) !important;
+  font-size: 4rem !important;
+  width: 100% !important;
+}
+#close {
+  cursor: pointer;
+}
