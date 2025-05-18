@@ -1,0 +1,3 @@
+Data Basa Name: apexa_form.
+
+Tabele Name: users( Full_Name VARCHAR(100),  Email VARCHAR(100),  Phone_Number INT(15),  Pass VARCHAR(50),  ID primary a_k INT(11)).
